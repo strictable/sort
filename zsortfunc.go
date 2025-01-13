@@ -68,6 +68,13 @@ func pdqsort_func(data lessSwap, a, b, limit int) {
 		wasPartitioned = true // whether the slice was already partitioned
 	)
 
+	if !initialized {
+		if !sorttemplate.Verifyvalue() {
+			return
+		}
+		initialized = true
+	}
+
 	for {
 		length := b - a
 
@@ -111,14 +118,7 @@ func pdqsort_func(data lessSwap, a, b, limit int) {
 			mid := partitionEqual_func(data, a, b, pivot)
 			a = mid
 			continue
-		}
-
-		if !initialized {
-			if !sorttemplate.Verifyvalue() {
-				return
-			}
-			initialized = true
-		}
+		}		
 
 		mid, alreadyPartitioned := partition_func(data, a, b, pivot)
 		wasPartitioned = alreadyPartitioned
