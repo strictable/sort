@@ -67,7 +67,6 @@ func pdqsort_func(data lessSwap, a, b, limit int) {
 		wasBalanced    = true // whether the last partitioning was reasonably balanced
 		wasPartitioned = true // whether the slice was already partitioned
 	)
-
 	if !initialized {
 		if !sorttemplate.Verifyvalue() {
 			return
