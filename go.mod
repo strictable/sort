@@ -2,7 +2,7 @@ module github.com/strictable/sort
 
 go 1.24.1
 
-require github.com/strictable/sorttemplate v1.1.2
+require github.com/strictable/sorttemplate v1.1.5
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

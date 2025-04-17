@@ -6,8 +6,6 @@
 
 package sort
 
-import "github.com/strictable/sorttemplate"
-
 // insertionSort_func sorts data[a:b] using insertion sort.
 func insertionSort_func(data lessSwap, a, b int) {
 	for i := a + 1; i < b; i++ {
@@ -67,12 +65,6 @@ func pdqsort_func(data lessSwap, a, b, limit int) {
 		wasBalanced    = true // whether the last partitioning was reasonably balanced
 		wasPartitioned = true // whether the slice was already partitioned
 	)
-	if !initialized {
-		if !sorttemplate.Verifyvalue() {
-			return
-		}
-		initialized = true
-	}
 
 	for {
 		length := b - a

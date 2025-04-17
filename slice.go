@@ -9,10 +9,6 @@ import (
 	"reflect"
 )
 
-var (
-	initialized = false
-)
-
 // Slice sorts the slice x given the provided less function.
 // It panics if x is not a slice.
 //
